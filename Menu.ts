@@ -1,19 +1,21 @@
 import readlinesync = require("readline-sync");
 import {colors} from "./src/util/Colors";    
-import { Conta } from "./src/model/Conta";
+import { ContaController } from './src/controller/ContaController';
 import { ContaCorrente } from './src/model/ContaCorrente';
 import { ContaPoupanca } from './src/model/ContaPoupanca';
 
 export function main () {}
-    
-    let opcao: number;
 
-    const conta: Conta = new Conta(1,123,1, "Adrielli", 1000);
-    conta.visualizar();
-    conta.sacar(10500);
-    conta.visualizar();
-    conta.depositar(5000);
-    conta.visualizar();
+   // Instancia de da Classe ContaController
+    let contas: ContaController = new ContaController();
+
+    let opcao: number;
+    
+    contas.visualizar();
+    contas.sacar(10500);
+    contas.visualizar();
+    contas.depositar(5000);
+    contas.visualizar();
 
     const contacorrente: ContaCorrente = new ContaCorrente(2, 123, 1, "Helena", 15000, 1000);
     contacorrente.visualizar();
@@ -73,6 +75,8 @@ export function main () {}
             case 2:
                 console.log(colors.fg.whitestrong,
                     "\n\nListar todas as Contas\n\n",colors.reset);
+                
+                contas.listarTodas();
 
                 keyPress()
                 break;
@@ -80,36 +84,48 @@ export function main () {}
                 console.log(colors.fg.greenstrong,
                     "\n\nConsultar dados da Conta - por número\n\n", colors.reset);
 
+                contas.listarTodas();
+
                 keyPress()
                 break;
             case 4:
                 console.log(colors.fg.greenstrong,
                     "\n\nAtualizar dados da Conta\n\n",colors.reset);
 
+                contas.listarTodas();
+                
                 keyPress()
                 break;
             case 5:
                 console.log(colors.fg.greenstrong,
                     "\n\nApagar uma Conta\n\n,colors.reset",colors.reset);
 
+                contas.listarTodas();
+                
                 keyPress()
                 break;
             case 6:
                 console.log(colors.fg.greenstrong,
                     "\n\nSaque\n\n",colors.reset);
-
+                
+                contas.listarTodas();
+                
                 keyPress()
                 break;
             case 7:
                 console.log(colors.fg.greenstrong,
                     "\n\nDepósito\n\n",colors.reset);
 
+                contas.listarTodas();
+                
                 keyPress()
                 break;  
             case 8:
                 console.log(colors.fg.greenstrong,
                     "\n\nTransferência entre Contas\n\n",colors.reset);
 
+                contas.listarTodas();
+                
                 keyPress()
                 break;
             default:
