@@ -4,18 +4,12 @@ import { ContaController } from './src/controller/ContaController';
 import { ContaCorrente } from './src/model/ContaCorrente';
 import { ContaPoupanca } from './src/model/ContaPoupanca';
 
-export function main () {}
+export function main() {
 
    // Instancia de da Classe ContaController
     let contas: ContaController = new ContaController();
 
     let opcao: number;
-    
-    contas.visualizar();
-    contas.sacar(10500);
-    contas.visualizar();
-    contas.depositar(5000);
-    contas.visualizar();
 
     const contacorrente: ContaCorrente = new ContaCorrente(2, 123, 1, "Helena", 15000, 1000);
     contacorrente.visualizar();
@@ -32,7 +26,7 @@ export function main () {}
     contapoupanca.visualizar();
 
 
-    while (true) {}
+    while (true) {
 
         console.log(colors.bg.black, colors.fg.yellow,
                     "*****************************************************");
@@ -135,7 +129,8 @@ export function main () {}
                 keyPress()
                 break;
         }
-        
+    }    
+}    
 /* Função com os dados da pessoa desenvolvedora */
 export function sobre (): void {
     console.log("\n****************************************************");                                                 
