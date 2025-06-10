@@ -1,5 +1,5 @@
 {
-  "name": "conta-bancaria",
+  "name": "biblioteca-virtual",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@types/node": "^22.15.29",
+    "@types/node": "^24.0.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
